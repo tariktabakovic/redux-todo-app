@@ -17,7 +17,17 @@ const defaultTodo = {
     task: ''
 }
 
-
+function add (state= defaultTodo, action){
+    const newState= {...state};
+    switch(action.type){
+        case ADD_TODO = 'ADD_TODO':
+            newState.task = action.payload.task;
+            break;
+        default:
+            break;
+    }
+    return newState;
+}
 
 
 
