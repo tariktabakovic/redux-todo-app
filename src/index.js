@@ -1,4 +1,17 @@
+import {
+    createStore,
+    combineReducers
+} from 'redux';
 
+const ADD_TODO = 'ADD_TODO'
+function actionAddTodo (task){
+    return {
+        type: ADD_TODO,
+        payload: {
+            task
+        }
+    }
+}
 
 
 
