@@ -20,7 +20,7 @@ const defaultTodo = {
 function add (state= defaultTodo, action){
     const newState= {...state};
     switch(action.type){
-        case ADD_TODO = 'ADD_TODO':
+        case ADD_TODO:
             newState.task = action.payload.task;
             break;
         default:
@@ -40,9 +40,10 @@ function actionDelTodo(id){
     }
 }
 
-const defaultDelTodo = {
-    task: ''
-}
+
+
+const store = createStore(add, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 
 
 
