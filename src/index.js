@@ -31,15 +31,18 @@ function add (state= defaultTodo, action){
 
 
 const DEL_TODO = 'DEL_TODO';
-function actionDelTodo(task){
+function actionDelTodo(id){
     return {
         type: DEL_TODO,
         payload:{
-            task
+            id
         }
     }
 }
 
+const defaultDelTodo = {
+    task: ''
+}
 
 
 
