@@ -40,7 +40,19 @@ function actionDelTodo(id){
     }
 }
 
-
+const defaultApp = []
+function TodoApp (state= defaultApp, action){
+    switch(action.type){
+        case ADD_TODO:
+            return [
+                ...state, {
+                    id: action.id,
+                    text:action.text,
+                    completed: false
+                }
+            ]
+    }
+}
 
 const store = createStore(add, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -48,7 +60,7 @@ store.subscribe(()=>{
     console.table(store.getState())
 });
 
-store.dispatch(actionAddTodo());
+store.dispatch(actionAddTodo('do the dishes'));
 
 
 
