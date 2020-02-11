@@ -13,6 +13,9 @@ function actionAddTodo (task){
     }
 }
 
+const defaultTodo = {
+    task: ''
+}
 
 
 
