@@ -44,6 +44,11 @@ function actionDelTodo(id){
 
 const store = createStore(add, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+store.subscribe(()=>{
+    console.table(store.getState())
+});
+
+store.dispatch(actionAddTodo());
 
 
 
