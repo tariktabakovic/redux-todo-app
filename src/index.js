@@ -3,7 +3,7 @@ import {
     combineReducers
 } from 'redux';
 
-const ADD_TODO = 'ADD_TODO'
+const ADD_TODO = 'ADD_TODO';
 function actionAddTodo (task){
     return {
         type: ADD_TODO,
@@ -30,7 +30,15 @@ function add (state= defaultTodo, action){
 }
 
 
-
+const DEL_TODO = 'DEL_TODO';
+function actionDelTodo(task){
+    return {
+        type: DEL_TODO,
+        payload:{
+            task
+        }
+    }
+}
 
 
 
